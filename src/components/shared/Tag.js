@@ -1,7 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Tag = ({ children, link, linkTo, bck, size, color }) => {
+const Tag = ({
+  children,
+  link,
+  linkTo,
+  bck,
+  size,
+  color,
+  marginBottom,
+  border,
+}) => {
   const template = (
     <div
       style={{
@@ -11,6 +20,8 @@ const Tag = ({ children, link, linkTo, bck, size, color }) => {
         padding: '5px 10px',
         display: 'inline-block',
         fontFamily: 'Righteous',
+        marginBottom: marginBottom,
+        border: border,
       }}
     >
       {children}
@@ -22,6 +33,11 @@ const Tag = ({ children, link, linkTo, bck, size, color }) => {
   }
 
   return template;
+};
+
+Tag.defaultProps = {
+  marginBottom: 'inherit',
+  border: 'inherit',
 };
 
 export default Tag;
