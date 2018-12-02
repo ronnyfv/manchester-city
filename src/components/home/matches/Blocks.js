@@ -2,7 +2,10 @@ import React, { PureComponent } from 'react';
 import { Slide } from 'react-reveal';
 
 import { firebaseMatches } from './../../../firebase';
-import { snapshotToArray, reverseArray } from './../../shared/firebase-helpers';
+import {
+  snapshotToArray,
+  reverseArray,
+} from './../../../utils/firebase-helpers';
 
 import MatchBlock from './../../shared/MatchBlock';
 
